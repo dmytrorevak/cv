@@ -6,6 +6,10 @@ var gulp = require('gulp'),
 
 gulp.task('sass', function() {
     gulp.src('./src/sass/main.sass')
+        .pipe(sass({
+            outputStyle: 'compressed',
+            includePaths: require('node-normalize-scss').includePaths
+        }))
         .pipe(sass())
         .pipe(auto())
         .pipe(gulp.dest('build/css'));

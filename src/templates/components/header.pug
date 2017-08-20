@@ -1,1 +1,31 @@
-h1 hello
+// navigation start
+nav.navigation
+    ul.navigation__list
+        li.navigation__item
+            a.navigation__link(href="") some
+            a.navigation__link(href="") some
+            a.navigation__link(href="") some
+            a.navigation__link(href="") some
+            a.navigation__link(href="") some
+            a.navigation__link(href="") some
+    .cv
+        .cv-info
+            .cv-info__photo
+            figure
+                img(src="", alt="")
+            .cv-info__body
+            span.cv-info__hello-label HELLO
+            h1.cv-info__header I'm Dmytro Revak
+            h2.cv-info__postition Some position
+            ul.cv-info__list
+            - var cvInfo = {age: '20', phone: '063-224-77-14, 096 42 37 503', email: 'dmytro.revak@gmail.com'}
+            each value in cvInfo
+                li.cv__info-list-item=value
+        .cv-links
+            a.cv-links__link(href="") some
+            a.cv-links__link(href="") some
+            a.cv-links__link(href="") some
+            a.cv-links__link(href="") some
+            a.cv-links__link(href="") some
+            a.cv-links__link(href="") some
+// navigation end
