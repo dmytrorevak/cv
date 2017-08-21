@@ -19,12 +19,16 @@ nav.navigation.navigation_theme_default.flex.col
                 img(src="img/test-photo.png", alt="my photo")
             .cv-info__body
                 span.label.label_theme_default HELLO
-                h1.cv-info__header I'm Dmytro Revak
-                h2.cv-info__postition Some position
+                h1.cv-info__header
+                    span.subtitle-text I'm 
+                    | Dmytro Revak
+                h2.cv-info__postition Junior/Trainee Full-Stack Developer
                 ul.cv-info__list
-                - var cvInfo = {age: '20', phone: '063-224-77-14, 096 42 37 503', email: 'dmytro.revak@gmail.com'}
-                each value in cvInfo
-                    li.cv__info-list-item=value
+                - var cvInfo = {AGE: '20', PHONE: '063-224-77-14, 096-423-75-03', EMAIL: 'dmytro.revak@gmail.com', SKYPE: 'revak-dmytro', ADDRESS: 'Lviv, Ukraine'}
+                each value, key in cvInfo
+                    li.cv-info__list-item.flex
+                        span.cv-info__item-key=key
+                        span.cv-info__item-value=value
         .cv-links
             a.cv-links__link(href="") some
             a.cv-links__link(href="") some
