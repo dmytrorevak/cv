@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     auto = require('gulp-autoprefixer'),
-    pug = require('gulp-pug');
+    pug = require('gulp-pug'),
+    imagemin = require('gulp-imagemin');
 
 
 gulp.task('sass', function() {
@@ -23,7 +24,17 @@ gulp.task('pug', function() {
 });
 
 
-gulp.task('build', ['sass', 'pug']);
+gulp.task('img', function () {
+    gulp.src('./src/img/*')
+        .pipe(imagemin({
+            progressive: true,
+            optimizationLevel: 8
+        }))
+        .pipe(gulp.dest('build/img'));
+});
+
+
+gulp.task('build', ['pug', 'sass', 'img']);
 
 
 gulp.task('watch', function() {
