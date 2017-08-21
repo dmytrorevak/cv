@@ -34,7 +34,13 @@ gulp.task('img', function () {
 });
 
 
-gulp.task('build', ['pug', 'sass', 'img']);
+gulp.task('fonts', function () {
+    gulp.src('./src/fonts/*')
+        .pipe(gulp.dest('build/fonts/'));
+});
+
+
+gulp.task('build', ['pug', 'sass', 'img', 'fonts']);
 
 
 gulp.task('watch', function() {

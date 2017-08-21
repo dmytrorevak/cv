@@ -1,0 +1,27 @@
+.label
+    display: inline-block
+    padding: 5px
+
+    &_theme_default
+        background-color: $green
+        color: #ffffff
+
+    &::after
+      content: ''
+      position: absolute
+      top: 0px
+      left: 128px
+      width: 0
+      height: 0
+      border: 50px solid transparent
+      border-left: 12px solid #ccc
+    
+    &::before
+      content: ''
+      position: absolute
+      top: 0px
+      left: 129px
+      width: 0
+      height: 0
+      border: 50px solid transparent
+      border-left: 12px solid #999
