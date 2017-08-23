@@ -1,19 +1,20 @@
 .label
     display: inline-block
+    position: relative
     padding: 5px
 
     &_theme_default
-        position: relative
         background-color: $green
-        color: #ffffff
+        color: #fff
         font-weight: bold
 
-    &::after
-        content: ""
-        position: absolute
-        top: 100%
-        left: 10%
-        width: 0
-        height: 0
-        border-top: 10px solid $green
-        border-right: 10px solid transparent
+    &_arrow
+        &::after
+            content: ""
+            position: absolute
+            top: 100%
+            left: 10%
+            width: 0
+            height: 0
+            border-top: 10px solid $green
+            border-right: 10px solid transparent
