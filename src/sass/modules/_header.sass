@@ -33,27 +33,32 @@
                 border-radius: 15%
 
 .cv
-    width: 60%
+    width: 65%
     transform: translateY(75px)
 
     &_theme_default
         background-color: #fff
-        padding: 40px
 
 .cv-info
     justify-content: space-between
-    padding-bottom: 30px
+    padding: 40px
 
     &__photo
         width: 35%
 
     &__body
-        justify-content: space-between
         width: 60%
 
-    &__header,
+    &__header
+        margin: 5px 0
+
     &__postition
-        margin: 15px 0
+        margin: 0
+        padding: 0 0 20px 0
+        border-bottom: 2px solid $lightGrey
+
+    &__list
+        margin-top: auto
 
     &__list-item
         list-style-type: none
@@ -65,10 +70,22 @@
     &__item-key
         width: 25%
         font-weight: bold
-    
+
     &__item-value
         color: $lightGrey
 
 .cv-links
     &__theme_default
         background-color: $green
+
+    &__list
+        justify-content: center
+        width: 100%
+
+    &__item
+        @extend .navigation__item
+
+    &__link
+        display: inline-block
+        width: 1.25rem
+        margin: 1rem 1.5rem

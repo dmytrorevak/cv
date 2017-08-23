@@ -26,13 +26,13 @@ nav.navigation.navigation_theme_default.flex.col
                     | Dmytro Revak
                 h2.cv-info__postition Junior/Trainee Full-Stack Developer
                 ul.cv-info__list
-                - var cvInfo = {AGE: '20', PHONE: '063-224-77-14, 096-423-75-03', EMAIL: 'dmytro.revak@gmail.com', SKYPE: 'revak-dmytro', ADDRESS: 'Lviv, Ukraine'}
-                each value, key in cvInfo
-                    li.cv-info__list-item.flex
-                        span.cv-info__item-key=key
-                        span.cv-info__item-value=value
+                    - var cvInfo = {AGE: '20', PHONE: '063-224-77-14, 096-423-75-03', EMAIL: 'dmytro.revak@gmail.com', SKYPE: 'revak-dmytro', ADDRESS: 'Lviv, Ukraine'}
+                    each value, key in cvInfo
+                        li.cv-info__list-item.flex
+                            span.cv-info__item-key=key
+                            span.cv-info__item-value=value
         .cv-links.cv-links__theme_default
-            ul.cv-links__list
+            ul.cv-links__list.flex
                 li.cv-links__item
                     a.cv-links__link(href="")
                         img.cv-links__link-img(src="img/fb.svg", alt="facebook logo")
