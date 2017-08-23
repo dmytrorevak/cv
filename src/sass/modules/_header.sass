@@ -15,27 +15,30 @@
     &__link
         display: inline-block
         position: relative
-        padding-bottom: 5px
-        color: #ffffff
-        font-size: 1.2rem
+
+        &_theme_default
+            font-size: 1.2rem
+            color: #fff
 
         &:hover
             &::after
                 content: ""
                 display: inline-block
                 position: absolute
-                top: 25px
+                top: 30px
                 left: 0
                 width: 100%
                 background-color: $green
                 height: 4px
-                border-radius: 20%
+                border-radius: 15%
 
 .cv
     width: 60%
     transform: translateY(75px)
-    background-color: #ffffff
-    padding: 40px
+
+    &_theme_default
+        background-color: #ffffff
+        padding: 40px
 
 .cv-info
     justify-content: space-between

@@ -11,7 +11,7 @@ gulp.task('sass', function() {
             includePaths: require('node-normalize-scss').includePaths
         }))
         .pipe(sass())
-        .pipe(auto())
+        // .pipe(auto())
         .pipe(gulp.dest('build/css'));
 });
 
