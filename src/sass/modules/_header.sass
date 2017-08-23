@@ -47,15 +47,23 @@
         width: 35%
 
     &__body
+        justify-content: space-between
         width: 60%
+
+    &__header,
+    &__postition
+        margin: 15px 0
 
     &__list-item
         list-style-type: none
         padding: 5px 0
 
+        &:last-child
+            padding: 5px 0 0 0
+
     &__item-key
         width: 25%
         font-weight: bold
     
-    &__item-value    
+    &__item-value
         color: $lightGrey
